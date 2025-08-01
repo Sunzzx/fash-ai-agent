@@ -11,9 +11,26 @@ from pathlib import Path
 # Add src to path
 sys.path.append(str(Path(__file__).parent))
 
-from agents.clothing_agent import ClothingAgent
-from config.settings import Settings
-from utils.helpers import setup_logging
+from clothing_agent import ClothingAgent
+from settings import Settings
+# Simple logging setup function
+def setup_logging(log_level, log_file):
+    import logging
+    from pathlib import Path
+    
+    # Create logs directory if it doesn't exist
+    log_path = Path(log_file)
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Set up logging
+    logging.basicConfig(
+        level=getattr(logging, log_level.upper(), logging.INFO),
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()
+        ]
+    )
 
 
 async def main():

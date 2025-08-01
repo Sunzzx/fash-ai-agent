@@ -5,9 +5,9 @@ Filter agent for applying intelligent filtering to search results
 from typing import Dict, List, Any, Optional
 import re
 
-from .base_agent import BaseAgent
-from ..models.clothing_item import ClothingItem
-from ..models.preferences import UserPreferences
+from base_agent import BaseAgent
+from clothing_item import ClothingItem
+from preferences import UserPreferences
 
 
 class FilterAgent(BaseAgent):
