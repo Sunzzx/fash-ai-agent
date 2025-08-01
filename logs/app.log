@@ -1,0 +1,76 @@
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:33:57,736 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:49:00,356 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:49:03,710 - ClothingAgent - INFO - Starting search for: source venv/bin/activate && python main.py --query "blue jeans"
+2025-08-01 05:49:03,710 - ClothingAgent - INFO - Starting search for: source venv/bin/activate && python main.py --query "blue jeans"
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Starting search for: blue jeans
+2025-08-01 05:49:06,798 - ClothingAgent - INFO - Starting search for: blue jeans
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from amazon
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from amazon
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from ebay
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from ebay
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from etsy
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from etsy
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from asos
+2025-08-01 05:49:06,799 - ClothingAgent - INFO - Found 0 items from asos
+2025-08-01 05:49:06,799 - ClothingAgent - ERROR - Search failed for query: blue jeans: 'StorageService' object has no attribute 'store_search_results'
+Traceback (most recent call last):
+  File "/workspace/clothing_agent.py", line 204, in search
+    await self.storage_service.store_search_results(query, final_results)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StorageService' object has no attribute 'store_search_results'
+2025-08-01 05:49:06,799 - ClothingAgent - ERROR - Search failed for query: blue jeans: 'StorageService' object has no attribute 'store_search_results'
+Traceback (most recent call last):
+  File "/workspace/clothing_agent.py", line 204, in search
+    await self.storage_service.store_search_results(query, final_results)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'StorageService' object has no attribute 'store_search_results'
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized amazon scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized ebay scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized etsy scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Initialized asos scraper
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - No user preferences found
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Starting search for: red dress
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Starting search for: red dress
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from amazon
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from amazon
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from ebay
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from ebay
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from etsy
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from etsy
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from asos
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Found 0 items from asos
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Search completed. Found 0 items.
+2025-08-01 05:49:13,493 - ClothingAgent - INFO - Search completed. Found 0 items.

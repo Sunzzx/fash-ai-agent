@@ -24,7 +24,7 @@ scrapy-splash>=0.8.0
 playwright>=1.40.0
 
 # Email notifications
-smtplib2>=0.2.0
+# smtplib2 is part of Python standard library, no need to install separately
 
 # Configuration
 python-dotenv>=1.0.0
