@@ -1,6 +1,15 @@
 from typing import List, Dict, Any
-from app.models import ClothingItem, UserPreferences, FilterSettings
-from app.utils.logger import logger
+from clothing_item import ClothingItem
+from preferences import UserPreferences
+from logger import logger
+
+class FilterSettings:
+    """Filter settings for clothing items"""
+    def __init__(self):
+        self.sizes = []
+        self.colors = []
+        self.brands = []
+        self.price_ranges = {}
 
 class FilterAgent:
     def __init__(self, settings: FilterSettings):
@@ -94,9 +103,9 @@ class FilterAgent:
         # Price range filter
         price_ranges = getattr(self.settings, "price_ranges", {})
         if price_ranges:
-            if "min" in price_ranges and item.price < price_ranges["min"]:
-                return False
-            if "max" in price_ranges and item.price > price_ranges["max"]:
+            min_price = price_ranges.get("min", 0)
+            max_price = price_ranges.get("max", float('inf'))
+            if not (min_price <= item.price <= max_price):
                 return False
 
         return True
@@ -109,25 +118,24 @@ class FilterAgent:
 
         # Brand match
         if preferences.preferred_brands and (item.brand or "").lower() in [b.lower() for b in preferences.preferred_brands]:
-            score += 5
+            score += 2.0
 
         # Color match
         if preferences.preferred_colors:
             item_color = (item.color or "").lower()
-            for color in preferences.preferred_colors:
-                if color.lower() in item_color:
-                    score += 2
-                    break  # early exit
+            if any(color.lower() in item_color for color in preferences.preferred_colors):
+                score += 1.5
 
         # Size match
         if preferences.preferred_size and (item.size or "").upper() == (preferences.preferred_size or "").upper():
-            score += 3
+            score += 1.0
 
         # Price closeness
         if preferences.min_price or preferences.max_price:
-            ideal_price = (preferences.min_price + preferences.max_price) / 2 if (preferences.min_price and preferences.max_price) else preferences.min_price or preferences.max_price
-            price_difference = abs(item.price - ideal_price)
-            score += max(0, 2 - price_difference / 50)
+            target_price = (preferences.min_price or 0 + preferences.max_price or 100) / 2
+            price_diff = abs(item.price - target_price)
+            price_score = max(0, 1 - (price_diff / target_price))
+            score += price_score
 
         # Text relevance from description/title
         preference_keywords = set(
