@@ -1,0 +1,16 @@
+name: 📝 Custom Issue
+description: Open a general issue that doesn't fit Bug/Feature
+title: "[Custom]: "
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: "Use this template for anything not covered by Bug or Feature."
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What's the issue about?
+      placeholder: Provide context here
+    validations:
+      required: true

@@ -1,0 +1,26 @@
+name: ✨ Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "We love ideas! Please fill out this template to suggest a feature."
+  - type: input
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: Brief description of the feature
+      placeholder: Add a summary
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Detailed Description
+      description: Explain the feature in detail
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: Why should this feature be added?
